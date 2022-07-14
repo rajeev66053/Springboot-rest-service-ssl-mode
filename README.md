@@ -15,6 +15,11 @@
   keysize keyword is use to give a file size, keypass is the keystore password, storepass is for truststore password and
   keystore is for where keystore will be generate.
   > keytool -genkey -alias local_sslcert_selfSigned -keyalg RSA -keysize 2048 -validity 700 -keypass rajeev -storepass rajeev -keystore ssl_server.jks
+  
+* To view the key we have to write command from the path where the certificate exists, in this application the certificate exists in `E:\springboot-rest-service-ssl-mode\registrationService`
+  > keytool -list -keystore ssl_server.jks
+  >
+  It will return the certificate.
 
 ### To create the ssl certificate in our application
 
